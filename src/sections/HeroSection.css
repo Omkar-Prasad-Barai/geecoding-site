@@ -1,0 +1,122 @@
+.hero-section-new {
+    padding: 60px 24px;
+    background-color: var(--bg-main);
+    overflow: hidden;
+}
+.hero-container-new {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.hero-left-new {
+    flex: 1;
+}
+.hero-headline-new {
+    font-size: clamp(2rem, 5vw, 5rem);
+    line-height: 1.1;
+    font-weight: 700;
+}
+.comment {
+    color: var(--text-subtle);
+}
+.hero-subheadline-new {
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 1.5rem 0 2rem 0;
+}
+.hero-buttons-new {
+    display: flex;
+    gap: 1rem;
+}
+.hero-right-new {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-right-new img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 25px;
+}
+.hero-marquee {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 3rem;
+    padding: 1rem 0;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+.hero-marquee-content {
+    display: flex;
+    width: fit-content;
+    animation: scroll 20s linear infinite;
+}
+.hero-marquee-content span {
+    flex-shrink: 0;
+    font-weight: 500;
+    padding: 0 2rem;
+    color: var(--text-subtle);
+}
+.btn-primary, .btn-secondary {
+    padding: 14px 32px; /* Increased padding */
+    border-radius: 12px; /* Slightly less rounded */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    border: 2px solid transparent; /* Added for consistent sizing */
+}
+
+.btn-primary {
+    background: var(--accent-gradient);
+    color: #fff;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-heading);
+    border: 2px solid var(--text-heading);
+}
+
+.btn-secondary:hover {
+    background: var(--text-heading);
+    color: #fff;
+    box-shadow: var(--shadow-md);
+}
+
+.hall-of-fame-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.hall-of-fame-btn {
+  /* Isse button thoda bada aur alag dikhega */
+  padding: 16px 36px;
+  font-size: 1.1rem;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media screen and (max-width: 960px) {
+    .hero-container-new {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-subheadline-new {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-buttons-new {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,177 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.popup-content {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: 2.5rem 3rem;
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid #eef2f9;
+}
+
+.popup-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-subtle);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.popup-close-btn:hover {
+  color: var(--text-body);
+}
+
+.popup-body {
+  text-align: center;
+}
+
+/* --- Birthday Popup (Aapka Original Code - No Changes) --- */
+.birthday-popup h2 {
+  font-size: 2.5rem;
+  color: var(--text-heading);
+}
+.birthday-students-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin: 1.5rem 0 1rem 0;
+}
+.birthday-student-profile {
+  flex-grow: 1;
+}
+.birthday-student-image {
+  width: 150px;
+  height: 180px;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  margin: 0 auto 1rem auto;
+  border: 4px solid var(--text-heading);
+  box-shadow: var(--shadow-md);
+}
+.birthday-popup .animated-gradient-text {
+  font-size: 2.6rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.birthday-popup p {
+  font-size: 1.2rem;
+  color: var(--text-body);
+  margin-top: 1.5rem;
+}
+.birthday-popup.multiple-birthdays .birthday-student-profile {
+  flex-basis: 180px;
+  max-width: 200px;
+}
+.birthday-popup.multiple-birthdays .birthday-student-image {
+  width: 100px;
+  height: 120px;
+  border-width: 3px;
+}
+.birthday-popup.multiple-birthdays .animated-gradient-text {
+  font-size: 1.5rem;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 2.25rem;
+}
+
+/* --- UPDATED: New Promotional Popup Styles --- */
+.promo-popup-new {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+.promo-image-new {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid #eef2f9;
+  transition: transform 0.3s ease;
+}
+.promo-image-new:hover {
+  transform: scale(1.03);
+}
+
+/* --- RESPONSIVE STYLES --- */
+@media screen and (max-width: 1050px) {
+  .popup-content {
+    max-width: 700px;
+    padding: 2rem 2.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .popup-content {
+    max-width: 500px;
+  }
+  .birthday-popup .animated-gradient-text {
+    font-size: 2.5rem;
+    white-space: normal;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .popup-content {
+    width: 95%;
+    padding: 2.5rem 1.5rem;
+  }
+  .popup-close-btn {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+  .birthday-popup h2 {
+    font-size: 2rem;
+  }
+  .birthday-popup .animated-gradient-text {
+    font-size: 2.2rem;
+  }
+  .birthday-student-image {
+    width: 120px;
+    height: 150px;
+  }
+  .birthday-students-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+  }
+  .birthday-popup.multiple-birthdays .birthday-student-image {
+      width: 100px;
+      height: 120px;
+  }
+  .birthday-popup.multiple-birthdays .animated-gradient-text {
+      font-size: 1.5rem;
+  }
+  
+  /* NEW: Stacks promo images on mobile */
+  .promo-popup-new {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

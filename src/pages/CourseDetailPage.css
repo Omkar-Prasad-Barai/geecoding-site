@@ -1,0 +1,163 @@
+/* src/pages/CourseDetailPage.css */
+
+.course-hero {
+    background: var(--text-heading);
+    background-image: linear-gradient(45deg, #4b82c9, #2c506e);
+    color: white;
+    padding: 60px 24px;
+    text-align: center;
+}
+.course-main-title {
+    font-size: 3rem;
+    color: white;
+}
+.course-tagline {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 1rem auto 0;
+    opacity: 0.9;
+}
+
+.course-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    align-items: start;
+}
+
+.course-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.75rem;
+}
+
+.content-section {
+    margin-bottom: 3rem;
+}
+.content-section p {
+    line-height: 1.7;
+}
+
+.learning-outcomes {
+    list-style: none;
+}
+.learning-outcomes li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+.learning-outcomes svg {
+    color: #22c55e;
+}
+
+.tech-stack-detailed {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--bg-main);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+.tech-item svg {
+    color: var(--text-heading);
+}
+
+.syllabus-accordion details {
+    background: var(--bg-main);
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+    transition: background-color 0.3s ease;
+}
+.syllabus-accordion details[open] {
+    background-color: white;
+}
+.syllabus-accordion summary {
+    padding: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+}
+.syllabus-accordion summary svg { color: var(--text-heading); }
+.syllabus-accordion ul {
+    padding: 0.5rem 2rem 1.5rem 3.5rem;
+}
+.syllabus-accordion li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.sticky-card {
+    position: sticky;
+    top: 120px; 
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+.card-image-placeholder {
+    height: 180px;
+    background: var(--bg-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.card-image-placeholder h3 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.sticky-card .details-list {
+    padding: 1.5rem;
+}
+.details-list p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+}
+.details-list p svg {
+    color: var(--text-heading);
+}
+.enroll-btn {
+    display: block;
+    width: 75%;
+    text-align: center;
+    padding: 14px;
+    font-size: 1.1rem;
+    border-radius: var(--border-radius);
+    margin: 0rem 0rem 2rem 0rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ... (existing styles) ... */
+@media (max-width: 960px) {
+    .course-layout {
+        grid-template-columns: 1fr;
+    }
+    .sticky-card {
+        position: static;
+        margin-top: 2rem;
+    }
+    .course-main-title {
+        font-size: 2.2rem;
+    }
+}

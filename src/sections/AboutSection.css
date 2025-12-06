@@ -1,0 +1,50 @@
+/* AboutSection.css */
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: center;
+}
+.about-left .section-subheading {
+  font-size: 1.1rem;
+}
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.bento-card {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  text-align: center; /* UPDATED */
+}
+.bento-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+.bento-icon {
+  color: var(--text-heading);
+  margin-bottom: 1.5rem; /* UPDATED */
+  font-size: 3rem; /* UPDATED - Makes icon bigger */
+}
+.bento-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* ... (existing styles) ... */
+@media screen and (max-width: 960px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about-left .section-heading {
+    text-align: center;
+  }
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,66 @@
+/* ===== GOOGLE FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+
+/* ===== COLOR & THEME VARIABLES ===== */
+:root {
+  /* Main Theme Colors */
+  --bg-main: #F4F8FF;
+  --bg-card: #FFFFFF;
+  --text-heading: #4b82c9;
+  --text-body: #2c3e50;
+  --accent-action: #F97316;
+  --text-subtle: #94A3B8;
+
+  /* Gradients */
+  --accent-gradient: linear-gradient(to right, #F97316, #FFB900);
+
+  /* Typography */
+  --font-headings: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Sizing & Effects */
+  --border-radius: 16px;
+  --shadow-md: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0px 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== GLOBAL RESET & DEFAULTS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-main);
+  color: var(--text-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+    padding: 80px 24px;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+a {
+  text-decoration: none; /* UPDATED: Underline removed from all links */
+  color: inherit;
+}
+
